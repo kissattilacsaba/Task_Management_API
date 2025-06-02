@@ -1,0 +1,6 @@
+Django
+djangorestframework
+django-filter
+django-apscheduler
+gunicorn
+sentence_transformers
