@@ -29,6 +29,9 @@ gunicorn Task_Management_App.wsgi --config gunicorn_config.py
 (A docker setup was also created, but it had problems with the BackgroundScheduler, so it was left out for now)
 ## API endpoint documentation
 
+Following the above setup, the base url of the API is: `http://127.0.0.1:8000` The endpoint have to be appended to it.
+
+
 One Task has the following fields:
 * `id`: id of the task
 * `title`: title of the task
@@ -228,7 +231,7 @@ Example response:
 ## Design decisions
 
 * As it was not mentioned in the task description, no authentication or authorization mechanism is implemented. In a real application there should be a way to authenticate and the Tasks of the different users should be handled separately.
-* Testing was not implemented as it was deemed excessive  for the scope of the app
+* Testing was not implemented as it was deemed excessive for the scope of the app
 * Django REST framework was used to create basic CRUD functionality as it provides this out-of-the-box
 
 ### Smart task suggestion approach

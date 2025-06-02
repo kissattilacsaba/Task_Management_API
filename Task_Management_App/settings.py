@@ -14,42 +14,6 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-PARENT_DIR = Path(__file__).resolve().parent
-
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "file": {
-            "level": "INFO",
-            "class": "logging.FileHandler",
-            "filename": Path(PARENT_DIR, 'logs', 'access.log'),
-            "formatter": "verbose",
-            # 'when': 'midnight',
-            # 'interval': 1,
-            # 'encoding': 'utf-8',
-        },
-    },
-    "loggers": {
-        "django.server": {
-            "handlers": ["file"],
-            "level": "INFO",
-            "propagate": True,
-        },
-        "django.request": {
-            "handlers": ["file"],
-            "level": "ERROR",
-            "propagate": True,
-        },
-    },
-    'formatters': {
-        'verbose': {
-            'format': '[{asctime}] {levelname} {name} {message}',
-            "datefmt": "%Y-%m-%d %H:%M:%S",
-            'style': '{',
-        },
-    },
-}
 
 
 # Quick-start development settings - unsuitable for production
